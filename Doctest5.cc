@@ -4,8 +4,12 @@ using namespace std;
 
 
 int sum_of_squares_to_n(int n){
-    return 0;
-
+   int sum_squares = 0;
+   while (n>0){
+    sum_squares += n*n;
+    n--;
+    }
+   return sum_squares;
 }
 
 
