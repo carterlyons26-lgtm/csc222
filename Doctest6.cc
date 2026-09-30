@@ -4,7 +4,10 @@ using namespace std;
 
 
 int is_divisible_by(int a, int b){
-    return 0;
+   if (a == 0){
+       return true;
+    }
+    return a % b == 0 ? 1:0;
 }
 
 
