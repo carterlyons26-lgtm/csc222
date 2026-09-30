@@ -3,7 +3,11 @@
 using namespace std;
 
 int sum_to_n(int n){
-    return 0;
+   int sum;
+   while (n--){
+    sum++;
+    }
+    return sum;
 
 
 
