@@ -6,7 +6,7 @@ using namespace std;
 
 
 int is_even(int n){
-    return 1;
+    return n % 2 == 0 ? 1:0;
 
 
 }
