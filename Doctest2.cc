@@ -3,7 +3,8 @@
 using namespace std;
 
 int find_largest(int a, int b){
-    return 0;
+   int largest = a >= b ? a : b;
+    return largest;
 
 
 }
