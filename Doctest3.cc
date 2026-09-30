@@ -3,11 +3,12 @@
 using namespace std;
 
 int sum_to_n(int n){
-   int sum;
-   while (n--){
+   int sum = 0;
+   while (n>0){
     sum += n;
+    n--;
     }
-    return sum;
+   return sum;
 
 
 
