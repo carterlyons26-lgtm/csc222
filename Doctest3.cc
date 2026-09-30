@@ -5,7 +5,7 @@ using namespace std;
 int sum_to_n(int n){
    int sum;
    while (n--){
-    sum++;
+    sum += n;
     }
     return sum;
 
