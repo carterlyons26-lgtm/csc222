@@ -4,14 +4,17 @@ using namespace std;
 
 int count_digits(int n){
    int num_dec = 0;
-    while (n > 0)
+   if (n == 0){
+       return num_dec == 0;
+       }     
+   while (n > 0)
    {
        num_dec++;
        n /= 10;
    }
 
 
-    return 0;
+    return num_dec;
 }
 
 
