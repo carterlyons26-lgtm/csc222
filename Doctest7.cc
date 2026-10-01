@@ -4,26 +4,24 @@ using namespace std;
 
 
 int is_prime(int n){
-    int check_num = 0;
-    int set_num = n;
-    if (n % 2 == 0 & n != 2){
-       return false;
-   }
-   while (n--){
-    if (set_num % n == 0){
-        check_num++;
-   }
-   if (check_num < 2 & set_num / 1 == set_num){
-       return true;
-   }
-   if (check_num >= 2){
-       return false;
-   }
+    int loop_num = 0;
+    if (n < 1){
+        return false;
+    }
+    if (n == 2){
+        return true;
+    }
+    if (n%2==0){
+        return false;
+    }
+    while (n--){
+       if  (n % n - 1 == 0){
+           loop_num++; 
+       }  
+    }
+    return loop_num > 2 ? false:true;
 
-   }
-}    
-
-
+}
 
 TEST_CASE("is_prime(int n) returns true if n is a prime number") {
     CHECK(is_prime(0) == false);
