@@ -3,8 +3,18 @@
 using namespace std;
 
 int count_odd_digits(int n){
-    return 0;
+   int dig_num = 0;
+   int num_of_odd = 0;
 
+    while (n > 0){
+        dig_num = n % 10;
+        if (!(dig_num % 2 == 0)){
+                num_of_odd++;
+               }
+        n /= 10;
+
+    }
+    return num_of_odd;
 }
 
 
