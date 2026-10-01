@@ -4,9 +4,24 @@ using namespace std;
 
 
 int is_prime(int n){
-    return 0;
-}
-    
+    int check_num = 0;
+    int set_num = n;
+    if (n % 2 == 0 & n != 2){
+       return false;
+   }
+   while (n--){
+    if (set_num % n == 0){
+        check_num++;
+   }
+   if (check_num < 2 & set_num / 1 == set_num){
+       return true;
+   }
+   if (check_num >= 2){
+       return false;
+   }
+
+   }
+}    
 
 
 
