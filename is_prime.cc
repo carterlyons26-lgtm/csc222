@@ -4,8 +4,6 @@ using namespace std;
 
 
 int is_prime(int n){
-    int loop_num = 0;
-    int og_num = 0;
     if (n <= 1){
         return false;
     }
@@ -15,12 +13,12 @@ int is_prime(int n){
     if (n%2==0){
         return false;
     }
-    while (n--){
-       if  (n > 0 % og_num % n == 0){
-           loop_num++;
-       }  
-    }
-    return loop_num == 1;
+    for (int i = 2; i < n; i++){
+        if (n % i == 0){ 
+            return false;
+        }
+     }
+    return true;
 
 }
 
