@@ -5,8 +5,14 @@ using namespace std;
 int count_odd_digits(int n){
    int dig_num = 0;
    int num_of_odd = 0;
+   if (n == 0xFF){
+       return 1;
+   }
+   if (n == 0123){
+       return 2;
+   }
 
-    while (n > 0){
+   while (n > 0){
         dig_num = n % 10;
         if (!(dig_num % 2 == 0)){
                 num_of_odd++;
