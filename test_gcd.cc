@@ -5,11 +5,12 @@ using namespace std;
 int gcd(int n, int m){
     int gcd = 0;
     int largest = n >= m ? n : m;
-    while (largest--){
+    while (largest > 0){
         if (n % largest  == 0 && m % largest == 0){
             gcd = largest;
             break;
         }
+        largest--;
 
       }
     return gcd;
