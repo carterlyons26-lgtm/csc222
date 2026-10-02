@@ -3,7 +3,15 @@
 using namespace std;
 
 int gcd(int n, int m){
-    return 0;
+    int gcd = 0;
+    int largest = n >= m ? n : m;
+    while (largest--){
+        if (n % largest  == 0 && m % largest == 0){
+            gcd  = largest;
+        }
+
+      }
+    return gcd;
 }
 
 
