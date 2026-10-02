@@ -7,7 +7,8 @@ int gcd(int n, int m){
     int largest = n >= m ? n : m;
     while (largest--){
         if (n % largest  == 0 && m % largest == 0){
-            gcd  = largest;
+            gcd = largest;
+            break;
         }
 
       }
