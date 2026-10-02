@@ -3,7 +3,18 @@
 using namespace std;
 
 int lcm(int n, int m){
-    return 0;
+    int gcd = 0;
+    int largest = n >= m ? n : m;
+    while (largest > 0){
+        if (n % largest  == 0 && m % largest == 0){
+            gcd = largest;
+            break;
+        }
+        largest--;
+
+      }
+    int lcm = (n * m)/gcd;
+    return lcm;
 }
 
 TEST_CASE("lcm(int n, int m) returns the LCM of n and m") {
