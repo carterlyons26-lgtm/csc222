@@ -4,7 +4,17 @@ using namespace std;
 
 
 int largest_digit(int n){
-    return 0;
+    int dig = 0;
+    int largest_dig = n % 10;
+    while (n > 0){
+        dig = n % 10;
+        if (dig >= largest_dig){
+            largest_dig = dig;
+        }
+        n /= 10;
+    }
+    return largest_dig;
+
 }
 
 
