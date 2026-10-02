@@ -1,0 +1,20 @@
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include </Users/1005815/doctest/doctest/doctest.h>
+using namespace std;
+
+int gcd(int n, int m){
+    return 0;
+}
+
+
+
+
+TEST_CASE("gcd(int n, int m) returns the GCD of n and m") {
+    CHECK(gcd(12, 8) == 4);
+    CHECK(gcd(48, 18) == 6);
+    CHECK(gcd(7, 13) == 1);
+    CHECK(gcd(294, 210) == 42);
+    CHECK(gcd(19, 19) == 19);
+}
+
+
