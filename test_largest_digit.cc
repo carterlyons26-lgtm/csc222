@@ -6,6 +6,10 @@ using namespace std;
 int largest_digit(int n){
     int dig = 0;
     int largest_dig = n % 10;
+    if (n < 0){
+        n *= -1;
+    }
+
     while (n > 0){
         dig = n % 10;
         if (dig >= largest_dig){
