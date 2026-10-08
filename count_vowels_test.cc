@@ -4,7 +4,13 @@
 using namespace std;
 
 int count_vowels(string n){
-    return 0;
+    int num_vowels = 0;
+    for (int i = 0; i <= n.length()-1; i++){
+        if (n.substr(i,1) == "a" || n.substr(i,1) == "e" || n.substr(i,1) == "i" || n.substr(i,1) == "o" || n.substr(i,1) == "u"){
+            num_vowels++;
+        }
+    }
+    return num_vowels;
 }
 
 
