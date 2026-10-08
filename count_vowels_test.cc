@@ -5,7 +5,9 @@ using namespace std;
 
 int count_vowels(string n){
     int num_vowels = 0;
-
+    if (n.length() == 0){
+        return num_vowels;
+    }
     for (int i = 0; i <= n.length() -1; i++){
         if (n.substr(i,1) >= "A" && n.substr(i,1) <= "Z"){
              n[i] = n[i] + 'a' - 'A';
