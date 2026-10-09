@@ -5,7 +5,17 @@ using namespace std;
 
 
 int count_words(string n){
-    return 0;
+    int num_spaces = 1;
+    if (n == ""){
+        return 0;
+    }
+    for (int i = 0; i <= n.length()-1;i++){
+        if (n.substr(i,1) == " "){
+            num_spaces++;
+        }
+    }
+    return num_spaces;
+
 }
 
 
