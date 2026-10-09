@@ -5,7 +5,11 @@ using namespace std;
 
 
 int is_palindrome(string n){
-    return 0;
+    string reverse_str = "";
+    for (int i = n.length() - 1; i >= 0; i--){
+        reverse_str += n.substr(i,1);
+     }
+    return reverse_str == n ? 1:0;
 }
 
 
