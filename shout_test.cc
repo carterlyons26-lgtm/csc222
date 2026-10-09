@@ -7,7 +7,13 @@ using namespace std;
 
 
 string shout(string n){
-    return "";
+    for (int i = 0; i <= n.length()-1;i++){
+        if (n.substr(i,1) != "," && n.substr(i,1) != "." && n.substr(i,1) != "!" && n.substr(i,1) != "'"){
+            n[i] = n[1] + 'A' - 'a';
+        }
+    }
+    n.substr(n.length()-1) = "!";
+    return n;
 }
 
 
