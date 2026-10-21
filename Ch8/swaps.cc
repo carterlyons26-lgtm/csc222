@@ -1,18 +1,31 @@
 #include <iostream>
-#include <random>
 using namespace std;
 
 
-void shuffle(int n[])
+void swaps_refrence(int a, int b)
 {
-    for (int i = 0; i < n.size(); i++)
-    {
-        int ran = distr(0,n.size());
-        int temp = n[i];
-        n[i] = n[ran];
-        n[ran] = temp;
-    }
-   }
+   int temp = a;
+   a = b;
+   b = temp;
+}
 
 
 
+
+
+
+int main(){
+
+    int x = 20;
+    int y = 42;
+
+
+
+    cout << "x: " << x << "y: " << y << endl;
+    cout << "address of x: " << long(&x) << endl;
+    cout << "address of y: " << long(&y) << endl;
+    cout << "Calling swaps_refrence..." << endl;
+    swaps_refrence(x, y);
+
+
+}
