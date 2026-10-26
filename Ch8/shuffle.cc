@@ -1,30 +1,47 @@
 #include <iostream>
 #include <vector>
-#include <random>
-#include <algorithm>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
 
 void shuffle(int n[], int size) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
    
-    for (int i = size - 1; i > 0; --i) {
-        std::uniform_int_distribution<int> distrib(0, i);
-        int ran = distrib(gen);
+    for (int i = 0; i < size-1; i++){
+        int ran = rand() % (i+1);
         int temp = n[i];
         n[i] = n[ran];
         n[ran] = temp;
     }
 }
 
+void pure_shuffle(int n[], int size){
+    int copy[size];
+    for (int i = 0; i <size;i++){
+        copy[i] = n[i];
+    }
+     for (int i = 0; i < size-1; i++){
+        int ran = rand() % (i+1);
+        int temp = copy[i];
+        copy[i] = copy[ran];
+        copy[ran] = temp;
+    }
+
+}
+
+
 int main() {
+    srand(time(0));
     int arr[] = {10, 9, 8, 7, 6};
     int n = sizeof(arr) / sizeof(arr[0]);
     
     shuffle(arr, n);
-    for (int i = 0; i < n; i++) {
-        std::cout << arr[i] << " ";
+    pure_shuffle(arr, n);
+    for(int i = 0;i<n;i++){
+        cout<<arr[i] << " ";
     }
-    std::cout << '\n';
+    cout << "\n";
 
     return 0;
+    
 }
